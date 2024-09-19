@@ -6,12 +6,12 @@
   home.packages = with pkgs; [
     bottom
     neofetch
-    
+
     bitwarden-desktop
     bitwarden-cli
 
-    pavucontrol  
-    easyeffects  
+    pavucontrol
+    easyeffects
 
     starship
     kitty

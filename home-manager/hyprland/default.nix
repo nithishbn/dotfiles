@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-imports = [./waybar];
+  imports = [./waybar];
 
   home.packages = with pkgs; [
     waybar
@@ -24,8 +24,8 @@ imports = [./waybar];
     extraConfig = builtins.readFile ./hypr/hyprland.conf;
   };
   home.file.".config/hypr/" = {
-      source = ./hypr;
-      recursive = true;
-      enable = true;
-    };
+    source = ./hypr;
+    recursive = true;
+    enable = true;
+  };
 }

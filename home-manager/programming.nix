@@ -12,4 +12,10 @@
     rustup
     gitkraken
   ];
+
+  programs.git = {
+    enable = true;
+    userName = "Nithish";
+    userEmail = "gh-n@elevenbn.com";
+  };
 }

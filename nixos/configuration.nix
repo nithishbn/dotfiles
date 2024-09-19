@@ -1,4 +1,3 @@
-
 {
   config,
   lib,
@@ -24,7 +23,7 @@
 
   # firmware updates
   services.fwupd.enable = true;
-services.gnome.gnome-keyring.enable = true;
+  services.gnome.gnome-keyring.enable = true;
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
@@ -85,7 +84,6 @@ services.gnome.gnome-keyring.enable = true;
     pop-icon-theme
 
     tailscale
-    
 
     networkmanagerapplet
     meson
@@ -95,8 +93,8 @@ services.gnome.gnome-keyring.enable = true;
     wlroots
 
     polkit_gnome
-      ];
- # enable Hyprland
+  ];
+  # enable Hyprland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   xdg.portal.enable = true;

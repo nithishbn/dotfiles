@@ -15,7 +15,7 @@
 
   programs.git = {
     enable = true;
-    userName = "Nithish";
+    userName = "Nithish Narasimman";
     userEmail = "gh-n@elevenbn.com";
   };
 }

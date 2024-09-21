@@ -1,12 +1,13 @@
-/** ********** Fonts ********** **/
-* {
+/* * ********** Fonts ********** */
+/* 
+{
     font-family: "JetBrains Mono", "Iosevka Nerd Font", archcraft, sans-serif;
     font-size: 12px;
-}
+} */
 
 /** ********** Waybar Window ********** **/
 window#waybar {
-    background-color: #1e1e2e;
+	background: rgba(43, 48, 59, 0.5);
 	color: #1e1e2e;
     border-bottom: 2px solid #313244;
     transition-property: background-color;
@@ -180,5 +181,5 @@ window#waybar.hidden {
 #network {
 	border-radius: 4px;
 	margin: 6px 0px;
-	padding: 2px 8px;
+	padding: 2px 4px;
 }

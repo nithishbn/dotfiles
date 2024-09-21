@@ -77,6 +77,17 @@
          "interval": 5,
          "format": " LOAD: {usage}%",
     },
+    "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 16,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": ["warp-terminal", "kitty"],
+    "rewrite": {
+      "Firefox Web Browser": "Firefox",
+    }
+  },
            
 
 

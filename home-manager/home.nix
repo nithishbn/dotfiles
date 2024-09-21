@@ -11,6 +11,7 @@
     ./programming.nix
     ./utils.nix
     ./games.nix
+    ./apps.nix
     ./hyprland
   ];
 

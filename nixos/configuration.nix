@@ -20,19 +20,28 @@
 
   # Set your time zone.
   # time.timeZone = "Europe/Amsterdam";
-
+  services.printing.enable = true;
   # firmware updates
   services.fwupd.enable = true;
   services.gnome.gnome-keyring.enable = true;
   # Enable the X11 windowing system.
   services.xserver = {
+     enable = true;
+  #   desktopManager = {
+  #     gnome.enable = true;
+  #   };
+  #   displayManager.gdm = {
+  #     enable = true;
+  #     wayland = true;
+  #   };
+  };
+  services.greetd = {
     enable = true;
-    desktopManager = {
-      gnome.enable = true;
-    };
-    displayManager.gdm = {
-      enable = true;
-      wayland = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember --time --cmd hyprland";
+        user = "nithish";
+      };
     };
   };
 
@@ -46,6 +55,8 @@
 
   # sound
   hardware.pulseaudio.enable = false;
+  hardware.graphics.enable32Bit = true;
+  hardware.pulseaudio.support32Bit = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -97,7 +108,7 @@
   # enable Hyprland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  xdg.portal.enable = true;
+  # xdg.portal.enable = true;
   # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;

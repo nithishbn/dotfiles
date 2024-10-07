@@ -5,6 +5,7 @@
 }: {
   home.packages = with pkgs; [
     bottom
+    
     neofetch
 
     bitwarden-desktop
@@ -15,5 +16,8 @@
 
     starship
     kitty
+
+    cups
+    playerctl
   ];
 }

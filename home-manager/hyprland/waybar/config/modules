@@ -50,9 +50,9 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
+        "format": "{icon}   {capacity}%",
+        "format-charging": "   {capacity}%",
+        "format-plugged": "   {capacity}%",
         "format-full": "{icon} Full",
         //"format-good": "",
         "format-alt": "{icon} {time}",
@@ -68,8 +68,8 @@
 		"rotate": 0,
         //"timezone": "America/New_York",
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": " {:%H:%M}",
-        "format-alt": " {:%a %b %d, %G}"
+        "format": "{:%H:%M}",
+        "format-alt": "{:%a %b %d, %G}"
     },
 
 	// waybar-cpu
@@ -79,7 +79,7 @@
     },
     "wlr/taskbar": {
     "format": "{icon}",
-    "icon-size": 16,
+    "icon-size": 8,
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",

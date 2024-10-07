@@ -13,7 +13,7 @@
     discord
 
     protonvpn-gui
-    protonmail-bridge
+    protonmail-bridge-gui
   ];
   programs.firefox.enable = true;
 }

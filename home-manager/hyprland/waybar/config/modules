@@ -55,7 +55,7 @@
         "format-plugged": "   {capacity}%",
         "format-full": "{icon} Full",
         //"format-good": "",
-        "format-alt": "{icon} {time}",
+        "format-alt": "{icon}  {time}",
         "format-icons": ["", "", "", "", ""],
         "format-time": "{H}h {M}min",
         "tooltip": true,
@@ -138,13 +138,13 @@
     "network": {
 		"interval": 5,
         //"interface": "wlan*", // (Optional) To force the use of this interface, set it for netspeed to work
-        "format-wifi": " {essid}",
-        "format-ethernet": " {ipaddr}/{cidr}",
-        "format-linked": " {ifname} (No IP)",
-        "format-disconnected": "睊 Disconnected",
-        "format-disabled": "睊 Disabled",
-        "format-alt": " {bandwidthUpBits} |  {bandwidthDownBits}",
-        "tooltip-format": " {ifname} via {gwaddr}",
+        "format-wifi": "  {essid}",
+        "format-ethernet": "  {ipaddr}/{cidr}",
+        "format-linked": "  {ifname} (No IP)",
+        "format-disconnected": "睊  Disconnected",
+        "format-disabled": "睊  Disabled",
+        "format-alt": "  {bandwidthUpBits} |   {bandwidthDownBits}",
+        "tooltip-format": "  {ifname} via {gwaddr}",
     },
 	
 
@@ -176,6 +176,6 @@
 	// waybar-tray
     "tray": {
         "icon-size": 16,
-        "spacing": 10
+        "spacing": 16
     }
 }

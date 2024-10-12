@@ -11,6 +11,7 @@
     jetbrains.rust-rover
     rustup
     gitkraken
+    lazygit
   ];
 
   programs.git = {

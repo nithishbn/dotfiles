@@ -5,7 +5,7 @@
 }: {
   home.packages = with pkgs; [
     bottom
-    
+
     neofetch
 
     bitwarden-desktop
@@ -19,5 +19,8 @@
 
     cups
     playerctl
+    brightnessctl
+
+    grimblast # screenshot
   ];
 }

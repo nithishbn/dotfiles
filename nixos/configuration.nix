@@ -26,20 +26,20 @@
   services.gnome.gnome-keyring.enable = true;
   # Enable the X11 windowing system.
   services.xserver = {
-     enable = true;
-  #   desktopManager = {
-  #     gnome.enable = true;
-  #   };
-  #   displayManager.gdm = {
-  #     enable = true;
-  #     wayland = true;
-  #   };
+    enable = true;
+    #   desktopManager = {
+    #     gnome.enable = true;
+    #   };
+    #   displayManager.gdm = {
+    #     enable = true;
+    #     wayland = true;
+    #   };
   };
   services.greetd = {
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember --time --cmd hyprland";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember --time --cmd Hyprland";
         user = "nithish";
       };
     };
@@ -50,6 +50,7 @@
     enable = true;
     xwayland.enable = true;
   };
+
   # services.desktopManager.cosmic.enable = true;
   # services.displayManager.cosmic-greeter.enable = true;
 
@@ -77,6 +78,7 @@
 
   #fingerprint reader
   services.fprintd.enable = true;
+  security.pam.services.hyprlock = {};
   services.udev.packages = with pkgs; [gnome-settings-daemon];
 
   environment.systemPackages = with pkgs; [
@@ -121,6 +123,13 @@
   ];
   services.openssh.enable = true;
   services.power-profiles-daemon.enable = true;
+  services.logind = {
+    powerKey = "ignore";
+    powerKeyLongPress = "poweroff";
+    lidSwitch = "sleep";
+    lidSwitchExternalPower = "sleep";
+  };
+
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
   #

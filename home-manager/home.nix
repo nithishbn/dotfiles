@@ -31,7 +31,6 @@
   # Enable home-manager and git
   programs.home-manager.enable = true;
   programs.git.enable = true;
-
   home.activation = {
     # https://github.com/philj56/tofi/issues/115#issuecomment-1701748297
     regenerateTofiCache = lib.hm.dag.entryAfter ["writeBoundary"] ''

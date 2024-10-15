@@ -14,6 +14,11 @@
 
     protonvpn-gui
     protonmail-bridge-gui
+
+    xfce.thunar # file system
+    zathura # pdf viewer
+
+    libreoffice
   ];
   programs.firefox.enable = true;
 }

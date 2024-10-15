@@ -21,11 +21,14 @@ window#waybar.hidden {
 /** ********** Backlight ********** **/
 #backlight {
 	background-color: #cba6f7;
+	opacity: 0.75;
 }
 
 /** ********** Battery ********** **/
 #battery {
-	background-color: #f9e2af;
+	background-color: #f9e1af;
+	opacity: 0.75;
+
 }
 
 #battery.charging {
@@ -43,6 +46,7 @@ window#waybar.hidden {
 #battery.critical:not(.charging) {
 	background-color: #f38ba8;
     color: #f38ba8;
+	opacity: 0.75;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -52,7 +56,7 @@ window#waybar.hidden {
 
 /** ********** Clock ********** **/
 #clock {
-	background-color: #a6e3a1;
+	color: #FFFFFF;
 }
 
 /** ********** CPU ********** **/

@@ -19,4 +19,15 @@
     userName = "Nithish Narasimman";
     userEmail = "gh-n@elevenbn.com";
   };
+
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      window = {
+        opacity = 0.75;
+      };
+      colors = {
+      };
+    };
+  };
 }

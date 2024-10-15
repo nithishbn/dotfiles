@@ -17,30 +17,52 @@
 
   networking.hostName = "nithish-laptop";
   networking.networkmanager.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Enable = "Source,Sink,Media,Socket";
+      };
+    };
+  };
+  services.blueman.enable = true;
 
-  # Set your time zone.
-  # time.timeZone = "Europe/Amsterdam";
-  services.printing.enable = true;
+  time.timeZone = "America/Los_Angeles";
+
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      gutenprint # — Drivers for many different printers from many different vendors.
+      gutenprintBin # — Additional, binary-only drivers for some printers.
+      hplip # — Drivers for HP printers.
+      hplipWithPlugin # — Drivers for HP printers, with the proprietary plugin. Use NIXPKGS_ALLOW_UNFREE=1 nix-shell -p hplipWithPlugin --run 'sudo -E hp-setup' to add the printer, regular CUPS UI doesn't seem to work.
+      postscript-lexmark # — Postscript drivers for Lexmark
+      samsung-unified-linux-driver # — Proprietary Samsung Drivers
+      splix # — Drivers for printers supporting SPL (Samsung Printer Language).
+      brlaser # — Drivers for some Brother printers
+      brgenml1lpr #  — Generic drivers for more Brother printers [1]
+      brgenml1cupswrapper # — Generic drivers for more Brother printers [1]
+      cnijfilter2 # — Drivers for some Canon Pixma devices (Proprietary driver)
+    ];
+  };
+  # network printing
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
   # firmware updates
   services.fwupd.enable = true;
   services.gnome.gnome-keyring.enable = true;
   # Enable the X11 windowing system.
-  services.xserver = {
-    enable = true;
-    #   desktopManager = {
-    #     gnome.enable = true;
-    #   };
-    #   displayManager.gdm = {
-    #     enable = true;
-    #     wayland = true;
-    #   };
-  };
+  services.xserver.enable = true;
+
   services.greetd = {
     enable = true;
     settings = {
       default_session = {
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember --time --cmd Hyprland";
-        user = "nithish";
       };
     };
   };
@@ -89,13 +111,6 @@
 
     power-profiles-daemon
 
-    gnomeExtensions.pop-shell
-    gnomeExtensions.appindicator
-    gnomeExtensions.pop-launcher-super-key
-
-    gnome-tweaks
-    pop-icon-theme
-
     tailscale
 
     networkmanagerapplet
@@ -106,6 +121,7 @@
     wlroots
 
     polkit_gnome
+    wireplumber
   ];
   # enable Hyprland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -120,14 +136,15 @@
     font-awesome
     nerdfonts
     fira-code
+    ibm-plex
   ];
   services.openssh.enable = true;
   services.power-profiles-daemon.enable = true;
   services.logind = {
     powerKey = "ignore";
     powerKeyLongPress = "poweroff";
-    lidSwitch = "sleep";
-    lidSwitchExternalPower = "sleep";
+    lidSwitch = "suspend";
+    lidSwitchExternalPower = "suspend";
   };
 
   # This option defines the first version of NixOS you have installed on this particular machine,

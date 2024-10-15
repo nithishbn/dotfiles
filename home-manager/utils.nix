@@ -5,7 +5,7 @@
 }: {
   home.packages = with pkgs; [
     bottom
-
+    bat 
     neofetch
 
     bitwarden-desktop

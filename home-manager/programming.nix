@@ -4,14 +4,13 @@
   ...
 }: {
   home.packages = with pkgs; [
-    warp-terminal
     vscode
     uv
     jetbrains.pycharm-professional
     jetbrains.rust-rover
     rustup
     gitkraken
-    lazygit
+    
   ];
 
   programs.git = {
@@ -20,14 +19,5 @@
     userEmail = "gh-n@elevenbn.com";
   };
 
-  programs.alacritty = {
-    enable = true;
-    settings = {
-      window = {
-        opacity = 0.75;
-      };
-      colors = {
-      };
-    };
-  };
+  
 }

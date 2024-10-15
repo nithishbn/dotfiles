@@ -7,6 +7,8 @@
     bottom
     bat
     neofetch
+    tmux
+    lazygit
 
     bitwarden-desktop
     bitwarden-cli
@@ -23,4 +25,14 @@
 
     grimblast # screenshot
   ];
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      window = {
+        opacity = 0.75;
+      };
+      colors = {
+      };
+    };
+  };
 }

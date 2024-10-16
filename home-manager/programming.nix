@@ -10,7 +10,6 @@
     jetbrains.rust-rover
     rustup
     gitkraken
-    
   ];
 
   programs.git = {
@@ -18,6 +17,4 @@
     userName = "Nithish Narasimman";
     userEmail = "gh-n@elevenbn.com";
   };
-
-  
 }

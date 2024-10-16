@@ -4,10 +4,11 @@
   pkgs,
   ...
 }: {
-  imports = [./waybar];
+  imports = [./waybar ./tofi];
 
   home.packages = with pkgs; [
     waybar
+    rofi
     tofi
     dunst
     swayosd
@@ -23,6 +24,15 @@
     systemd.variables = ["--all"];
     xwayland.enable = true;
     extraConfig = builtins.readFile ./hypr/hyprland.conf;
+  };
+  services.dunst = {
+    enable = true;
+    settings = {
+      global = {
+        mouse_left_click = "do_action, close_current";
+        mouse_right_click = "close_all";
+      };
+    };
   };
   home.file.".config/hypr/" = {
     source = ./hypr;

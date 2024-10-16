@@ -7,11 +7,9 @@
     bottom
     bat
     neofetch
+    fastfetch
     tmux
     lazygit
-
-    bitwarden-desktop
-    bitwarden-cli
 
     pavucontrol
     easyeffects

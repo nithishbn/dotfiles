@@ -112,8 +112,9 @@
     power-profiles-daemon
 
     tailscale
-
     networkmanagerapplet
+    wireguard-tools
+
     meson
     wayland-protocols
     wayland-utils

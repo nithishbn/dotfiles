@@ -17,6 +17,8 @@
       padding-right = 0;
       padding-bottom = 0;
 
+      prompt-text = "Open: ";
+      prompt-padding = 30;
       background-color = "#060606CC";
       text-color = "#f9fbff";
       selection-color = "#933";

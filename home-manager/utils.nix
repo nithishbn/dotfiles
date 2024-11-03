@@ -22,6 +22,9 @@
     brightnessctl
 
     grimblast # screenshot
+
+    nixd
+    alejandra
   ];
   programs.alacritty = {
     enable = true;
